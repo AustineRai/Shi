@@ -4,6 +4,45 @@
     margin: 20;
     box-sizing: border-box;
 }
+#header {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+#header .header {
+	min-height: 8vh;
+	background-color: rgba(31, 30, 30, 0.24);
+	transition: 0.3s ease background-color;
+}
+#header .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0 10px;
+}
+#header .nav-list ul a {
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+#header .nav-list ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+#header .nav-list ul li:hover a {
+	color: crimson;
+}
 body{
     background-image: url("pokeball.jpg");
     background-size: cover;
@@ -13,9 +52,6 @@ body{
     font-family: 'Monstserrat', sans-serif;
     font-size: 10px;
     background-repeat: repeat;
-}
-#text .a{
-    text-align: right;
 }
 .nav a{
     float:right;
@@ -29,10 +65,14 @@ body{
     text-transform: uppercase;
 }
 img{
-    padding: 10px;
+    padding: 5px;
     width: 25%;
     height: 30%;
     align-items: center;
+}
+h1{
+    font-size: 2rem;
+    color: rgb(254, 0, 229);
 }
 @media only screen and (min-width: 1200px) {
 	#header .hamburger {
